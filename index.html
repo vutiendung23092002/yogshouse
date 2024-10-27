@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>yogshouse</title>
+    <meta icon="image/x-icon" href="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LHQYBGNFWH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LHQYBGNFWH');
+    </script>
+
+
+    <style>
+        .block2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 11;
+        }
+
+        .block2__links {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: clamp(-20px, -12vw, -120px);
+        }
+
+        .link {
+            display: block;
+            padding: 10px;
+        }
+
+        .link:hover {
+            scale: 1.1;
+            transition: 250ms;
+        }
+
+
+
+
+
+        @keyframes animate {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+
+
+        [data-toggle="tooltip"] {
+            position: relative;
+            display: inline-block;
+        }
+
+        [data-toggle="tooltip"]::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 4px 6px 0 6px;
+            border-style: solid;
+            border-color: #181919 transparent transparent transparent;
+            z-index: 99;
+            opacity: 0;
+        }
+
+        [data-placement='left']::before {
+            left: 0%;
+            top: 50%;
+            margin-left: -12px;
+            transform: translateY(-50%) rotate(-90deg)
+        }
+
+        [data-placement='top']::before {
+            left: 50%;
+        }
+
+        [data-placement='bottom']::before {
+            top: 100%;
+            margin-top: 8px;
+            transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+        }
+
+        [data-placement='right']::before {
+            left: 100%;
+            top: 50%;
+            margin-left: 1px;
+            transform: translateY(-50%) rotate(90deg)
+        }
+
+        [data-toggle="tooltip"]::after {
+            content: attr(tooltip-title);
+            position: absolute;
+            left: 50%;
+            top: -6px;
+            transform: translateX(-50%) translateY(-100%);
+            background: #181919;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            min-width: 120px;
+            border-radius: 5px;
+            pointer-events: none;
+            padding: 4px 4px;
+            z-index: 99;
+            opacity: 0;
+        }
+
+        [data-placement='left']::after {
+            left: 0%;
+            top: 50%;
+            margin-left: -7px;
+            transform: translateX(-100%) translateY(-50%);
+        }
+
+        [data-placement='top']::after {
+            left: 50%;
+        }
+
+        [data-placement='bottom']::after {
+            top: 100%;
+            margin-top: 8px;
+            transform: translateX(-50%) translateY(0%);
+        }
+
+        [data-placement='right']::after {
+            left: 100%;
+            top: 50%;
+            margin-left: 8px;
+            transform: translateX(0%) translateY(-50%);
+        }
+
+        [data-toggle="tooltip"]:hover::after,
+        [data-toggle="tooltip"]:hover::before {
+            opacity: 1
+        }
+
+        .pr {
+            width: 250px;
+            top: 20px;
+            left: 10px;
+        }
+
+        .text-nowrap {
+            margin-left: -5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span><img src="logo.png" style="width: 180px;" /></span>
+        </div>
+    </div>
+
+    <!-- cursor effect-->
+    <div class="cursor"></div>
+    <!-- Header area  -->
+
+    <!-- header-section start -->
+    <header class="header-section w-100">
+        <div class="py-sm-6 py-3 mx-xxl-20 mx-md-15 mx-3">
+            <div class="d-flex align-items-center justify-content-between gap-xxl-10 gap-lg-8 w-100">
+                <nav
+                    class="navbar-custom d-flex gap-lg-6 align-items-center flex-column flex-lg-row justify-content-start justify-content-lg-between w-100">
+                    <div class="top-bar w-100 d-flex align-items-center gap-lg-0 gap-6">
+                        <button class="navbar-toggle-btn d-block d-lg-none" type="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <a class="navbar-brand d-flex align-items-center gap-4" href="#">
+                            <img class="w-100 logo1" src="logo.png" alt="favicon">
+                            <!-- <img class="w-100 logo2" src="assets/img/logo.png" alt="logo"> -->
+                        </a>
+                    </div>
+                    <div class="navbar-toggle-item w-100 position-lg-relative">
+                        <ul class="custom-nav gap-lg-7 gap-3 cursor-scale growDown2 ms-xxl-10" data-lenis-prevent>
+                            <li class="menu-link">
+                                <a href="#about" style="font-family: 'Chakra Petch';font-weight: 900;">Home</a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#intro" style="font-family: 'Chakra Petch';font-weight: 900;">About</a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#uti" style="font-family: 'Chakra Petch';font-weight: 900;">Utilities</a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#token" style="font-family: 'Chakra Petch';font-weight: 900;">Tokenomics</a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#road" style="font-family: 'Chakra Petch';font-weight: 900;">Roadmap</a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" tooltip-title="coming soon"
+                                    style="font-family: 'Chakra Petch';font-weight: 900;">
+
+                                    IDO </a>
+                            </li>
+                            <li class="menu-link">
+                                <a href="https://coinsult.net/projects/yogs-house/" data-toggle="tooltip"
+                                    data-placement="bottom" tooltip-title="coming soon"
+                                    style="font-family: 'Chakra Petch';font-weight: 900;">
+
+                                    Audit </a>
+                            </li>
+
+
+
+
+
+
+
+
+                        </ul>
+                    </div>
+                </nav>
+                <div class="header-btn-area d-flex align-items-center gap-sm-6 gap-1">
+
+                    <a href="https://etherscan.io/address/0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF" class="">
+                        <span class="btn-circle fs-2xl">
+                            <svg width="30px" height="30px" viewBox="0 0 123 123" fill="#000000"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.79 58.4149C25.7901 57.7357 25.9244 57.0633 26.1851 56.4361C26.4458 55.809 26.8278 55.2396 27.3092 54.7605C27.7907 54.2814 28.3619 53.9021 28.9903 53.6444C29.6187 53.3867 30.2918 53.2557 30.971 53.2589L39.561 53.2869C40.9305 53.2869 42.244 53.831 43.2124 54.7994C44.1809 55.7678 44.725 57.0813 44.725 58.4509V90.9309C45.692 90.6439 46.934 90.3379 48.293 90.0179C49.237 89.7962 50.0783 89.262 50.6805 88.5019C51.2826 87.7418 51.6102 86.8006 51.61 85.8309V45.5409C51.61 44.1712 52.154 42.8576 53.1224 41.889C54.0908 40.9204 55.4043 40.3762 56.774 40.3759H65.381C66.7506 40.3762 68.0641 40.9204 69.0325 41.889C70.0009 42.8576 70.545 44.1712 70.545 45.5409V82.9339C70.545 82.9339 72.7 82.0619 74.799 81.1759C75.5787 80.8462 76.2441 80.2941 76.7122 79.5886C77.1803 78.8832 77.4302 78.0555 77.431 77.2089V32.6309C77.431 31.2615 77.9749 29.9481 78.9431 28.9797C79.9113 28.0113 81.2245 27.4672 82.5939 27.4669H91.201C92.5706 27.4669 93.884 28.0109 94.8525 28.9794C95.8209 29.9478 96.365 31.2613 96.365 32.6309V69.3399C103.827 63.9319 111.389 57.4279 117.39 49.6069C118.261 48.4717 118.837 47.1386 119.067 45.7267C119.297 44.3148 119.174 42.8678 118.709 41.5149C115.931 33.5227 111.516 26.1983 105.745 20.0105C99.974 13.8228 92.9749 8.90785 85.1955 5.58032C77.4161 2.2528 69.0277 0.585938 60.5671 0.686416C52.1065 0.786893 43.7601 2.6525 36.062 6.16383C28.3638 9.67517 21.4834 14.7549 15.8611 21.078C10.2388 27.401 5.99842 34.8282 3.41131 42.8842C0.824207 50.9401 -0.0526487 59.4474 0.836851 67.8617C1.72635 76.276 4.36263 84.4119 8.57696 91.7489C9.31111 93.0145 10.3912 94.0444 11.6903 94.7175C12.9894 95.3906 14.4536 95.679 15.911 95.5489C17.539 95.4059 19.566 95.2029 21.976 94.9199C23.0251 94.8008 23.9937 94.2999 24.6972 93.5126C25.4008 92.7253 25.7901 91.7067 25.791 90.6509L25.79 58.4149Z"
+                                    fill="#000000" />
+                                <path
+                                    d="M25.6021 110.51C34.6744 117.11 45.3959 121.072 56.5802 121.957C67.7646 122.841 78.9757 120.615 88.9731 115.523C98.9705 110.431 107.364 102.673 113.226 93.1068C119.087 83.5405 122.188 72.539 122.185 61.3197C122.185 59.9197 122.12 58.5347 122.027 57.1577C99.808 90.2957 58.7831 105.788 25.604 110.505"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+
+                    </a>
+                    <a href="https://medium.com/@yogshouse" class="">
+                        <span class="btn-circle fs-2xl">
+                            <svg width="30px" height="30px" viewBox="0 -55 256 256" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                preserveAspectRatio="xMidYMid">
+                                <g>
+                                    <path
+                                        d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z"
+                                        fill="#000000">
+                                    </path>
+                                </g>
+                            </svg>
+                        </span>
+
+                    </a>
+
+                    <a href="https://t.me/httpYogsToken_Eth" class="">
+                        <span class="btn-circle fs-2xl">
+                            <svg fill="#000" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#000"
+                                    d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                            </svg>
+                        </span>
+
+                    </a>
+                    <a href="https://x.com/yogshouse_eth" class="">
+                        <span class="btn-circle fs-2xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#000000"
+                                    d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
+                            </svg>
+
+                        </span>
+
+                    </a>
+                    <a href="https://coinsult.net/projects/yogs-house/"
+                        class="btn-rounded-cus wallet-btn border-0 d-flex align-items-center gap-3 p-xl-2 p-0 pe-xl-6 rounded-5 position-relative">
+                        <span class="btn-circle fs-2xl">
+                            <img src="logo.png" style="width:36px;" />
+                        </span>
+                        <span class="text-nowrap d-none d-xl-block">Audit Report</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+
+
+    <style>
+        .logoresp {
+            margin-top: 20vh;
+
+        }
+
+        @media screen and (max-width: 768px) {}
+
+        .mobile {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .mobile {
+                display: block;
+                text-align: center;
+            }
+
+            .hero {
+                height: 300px;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        .subheading-utilities {
+            color: #fff;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .utilities-bold {
+            font-weight: 600;
+        }
+    </style>
+    <!-- Hero Section start  -->
+    <section class="hero-section pt-20 position-relative pb-120" id="about">
+        <div class=" gradient-bg">
+        </div>
+        <div class="gradient-bg2"></div>
+        <div class="star-area">
+            <!-- <div class="big-star">
+                <img class="w-100" src="assets/img/et" alt="star">
+            </div>
+            <div class="small-star">
+                <img class="w-100" src="assets/img/small-star.png" alt="star">
+            </div> -->
+        </div>
+        <!--  <div class="rotate-award">
+            <img class="w-100" src="https://monetafi.io/assets/img/file (3).png" alt="award">
+        </div> -->
+        <div class="container pt-120 pb-15">
+            <div class="row g-6 justify-content-between">
+                <div class="col-lg-4 col-md-5 col-sm-7">
+                    <div class="hero-content">
+
+                        <h1 class="hero-title display-one tcn-1 cursor-scale growUp mb-10">
+                            $YOGS Fun Freedom and Financial Growth.First T4G IDO platform For Telegram Mini Game [Yogs
+                            Listing Coming Soon]
+                            <br><br>
+                            <span class="d-block tcp-1">YOGS</span>
+                        </h1>
+                        <a href="https://t.me/httpYogsToken_Eth" style="width: 160px;float: left;"
+                            class="btn-rounded-cus  border-0 d-flex align-items-center gap-3 p-xl-2  pe-xl-6 rounded-5 position-relative mt-5">
+                            <span class="btn-circle fs-2xl">
+                                <img src="logo.png" style="width:38px;" />
+
+                            </span>
+                            <span class="text-nowrap "><strong>Yogs Coin</strong></span>
+                        </a>
+
+                        <a href="#"
+                            class="pr btn-rounded-cus  border-0 d-flex align-items-center gap-3 p-xl-2  pe-xl-6 rounded-5 position-relative">
+                            <span class="btn-circle fs-2xl">
+                                <img src="logo.png" style="width:38px;" />
+
+                            </span>
+                            <span class="text-nowrap "><strong>Presale Live</strong></span>
+                        </a>
+
+                    </div>
+                    
+                </div>
+                <p id="eth-address" style="font-family: 'Chakra Petch', sans-serif; margin-top: 50px;" onclick="copyToClipboard()">Send ETH to: 0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF</p>
+                <code>
+                    <pre style="font-size: larger; margin-left: -220px;">
+                        💰 Presale Details
+                        🔹 Hardcap: 16 ETH
+                        🔹 Softcap: 5 ETH
+                        🔹 Min Buy: 0.05 ETH
+                        🔹 Max Buy: 1.00 ETH
+    
+                        🌐 Pricing
+                        Presale: 1 ETH = 250B YOGS
+                        Listing: 1 ETH = 200B YOGS
+    
+                        🔥 100% Liquidity Will Be Burn For Forever!
+                        🎯 4 Trillion $YOGS allocated for Presale!
+                    </pre>
+                </code>
+                
+                <div class="col-xl-3 col-md-2 col-4 order-md-last order-lg-1">
+                    <div class="hero-banner-area">
+                        <div class="hero-banner-bg">
+                            <img class="w-100" src="1.png" alt="banner">
+                        </div>
+                        <div class="hero-banner-img">
+                            <img class=" logoresp" src="logo.png" alt="banner">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-6 order-md-1 order-lg-last">
+                    <div class="hero-banner-img mobile">
+                        <img class="hero my-5" src="logo.png" alt="banner">
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="">
+                                <span class="btn-circle fs-2xl mx-1">
+                                    <svg width="30px" height="30px" viewBox="0 0 123 123" fill="#000000"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M25.79 58.4149C25.7901 57.7357 25.9244 57.0633 26.1851 56.4361C26.4458 55.809 26.8278 55.2396 27.3092 54.7605C27.7907 54.2814 28.3619 53.9021 28.9903 53.6444C29.6187 53.3867 30.2918 53.2557 30.971 53.2589L39.561 53.2869C40.9305 53.2869 42.244 53.831 43.2124 54.7994C44.1809 55.7678 44.725 57.0813 44.725 58.4509V90.9309C45.692 90.6439 46.934 90.3379 48.293 90.0179C49.237 89.7962 50.0783 89.262 50.6805 88.5019C51.2826 87.7418 51.6102 86.8006 51.61 85.8309V45.5409C51.61 44.1712 52.154 42.8576 53.1224 41.889C54.0908 40.9204 55.4043 40.3762 56.774 40.3759H65.381C66.7506 40.3762 68.0641 40.9204 69.0325 41.889C70.0009 42.8576 70.545 44.1712 70.545 45.5409V82.9339C70.545 82.9339 72.7 82.0619 74.799 81.1759C75.5787 80.8462 76.2441 80.2941 76.7122 79.5886C77.1803 78.8832 77.4302 78.0555 77.431 77.2089V32.6309C77.431 31.2615 77.9749 29.9481 78.9431 28.9797C79.9113 28.0113 81.2245 27.4672 82.5939 27.4669H91.201C92.5706 27.4669 93.884 28.0109 94.8525 28.9794C95.8209 29.9478 96.365 31.2613 96.365 32.6309V69.3399C103.827 63.9319 111.389 57.4279 117.39 49.6069C118.261 48.4717 118.837 47.1386 119.067 45.7267C119.297 44.3148 119.174 42.8678 118.709 41.5149C115.931 33.5227 111.516 26.1983 105.745 20.0105C99.974 13.8228 92.9749 8.90785 85.1955 5.58032C77.4161 2.2528 69.0277 0.585938 60.5671 0.686416C52.1065 0.786893 43.7601 2.6525 36.062 6.16383C28.3638 9.67517 21.4834 14.7549 15.8611 21.078C10.2388 27.401 5.99842 34.8282 3.41131 42.8842C0.824207 50.9401 -0.0526487 59.4474 0.836851 67.8617C1.72635 76.276 4.36263 84.4119 8.57696 91.7489C9.31111 93.0145 10.3912 94.0444 11.6903 94.7175C12.9894 95.3906 14.4536 95.679 15.911 95.5489C17.539 95.4059 19.566 95.2029 21.976 94.9199C23.0251 94.8008 23.9937 94.2999 24.6972 93.5126C25.4008 92.7253 25.7901 91.7067 25.791 90.6509L25.79 58.4149Z"
+                                            fill="#000000" />
+                                        <path
+                                            d="M25.6021 110.51C34.6744 117.11 45.3959 121.072 56.5802 121.957C67.7646 122.841 78.9757 120.615 88.9731 115.523C98.9705 110.431 107.364 102.673 113.226 93.1068C119.087 83.5405 122.188 72.539 122.185 61.3197C122.185 59.9197 122.12 58.5347 122.027 57.1577C99.808 90.2957 58.7831 105.788 25.604 110.505"
+                                            fill="#000000" />
+                                    </svg>
+                                </span>
+
+                            </a>
+                            <a href="#" class="">
+                                <span class="btn-circle fs-2xl mx-1">
+                                    <svg width="800px" height="800px" viewBox="0 -55 256 256" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        preserveAspectRatio="xMidYMid">
+                                        <g>
+                                            <path
+                                                d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z"
+                                                fill="#000000">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+
+                            </a>
+                            <a href="#" class="">
+                                <span class="btn-circle fs-2xl mx-1">
+                                    <svg fill="#000" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                        viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#000"
+                                            d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                                    </svg>
+                                </span>
+
+                            </a>
+                            <a href="#" class="">
+                                <span class="btn-circle fs-2xl mx-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#000000"
+                                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
+                                    </svg>
+
+                                </span>
+
+                            </a>
+                            <a href="#" class="">
+                                <span class="btn-circle fs-2xl mx-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                        viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#000000"
+                                            d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z" />
+                                    </svg>
+
+                                </span>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-content desktop">
+                        <div class="card-area py-lg-8 py-6 px-lg-6 px-3 rounded-5 tilt mb-10" data-tilt>
+                            <h3 class="tcn-1  cursor-scale growDown mb-6 title-anim">
+                                Socials
+                            </h3>
+                            <div class="hr-line mb-6"></div>
+                            <div class="card-items d-grid gap-5">
+                                <p style="font-family: 'Roboto';"> Join the community and become part of the <span
+                                        style="font-weight: 900;color: #fff;">Yogs</span> Ecosystem.</p>
+
+
+                            </div>
+
+                            <br>
+
+                            <div>
+                                <a href="https://medium.com/@yogshouse" class="" target="_blank">
+                                    <span class="btn-circle fs-2xl fs-2xl mx-2">
+                                        <svg width="30px" height="30px" viewBox="0 -55 256 256" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                                            <g>
+                                                <path
+                                                    d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z"
+                                                    fill="#000000">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </span>
+
+                                </a>
+                                <a href="https://etherscan.io/address/0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF" class=""
+                                    target="_blank">
+                                    <span class="btn-circle fs-2xl">
+                                        <svg width="30px" height="30px" viewBox="0 0 123 123" fill="#000000"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M25.79 58.4149C25.7901 57.7357 25.9244 57.0633 26.1851 56.4361C26.4458 55.809 26.8278 55.2396 27.3092 54.7605C27.7907 54.2814 28.3619 53.9021 28.9903 53.6444C29.6187 53.3867 30.2918 53.2557 30.971 53.2589L39.561 53.2869C40.9305 53.2869 42.244 53.831 43.2124 54.7994C44.1809 55.7678 44.725 57.0813 44.725 58.4509V90.9309C45.692 90.6439 46.934 90.3379 48.293 90.0179C49.237 89.7962 50.0783 89.262 50.6805 88.5019C51.2826 87.7418 51.6102 86.8006 51.61 85.8309V45.5409C51.61 44.1712 52.154 42.8576 53.1224 41.889C54.0908 40.9204 55.4043 40.3762 56.774 40.3759H65.381C66.7506 40.3762 68.0641 40.9204 69.0325 41.889C70.0009 42.8576 70.545 44.1712 70.545 45.5409V82.9339C70.545 82.9339 72.7 82.0619 74.799 81.1759C75.5787 80.8462 76.2441 80.2941 76.7122 79.5886C77.1803 78.8832 77.4302 78.0555 77.431 77.2089V32.6309C77.431 31.2615 77.9749 29.9481 78.9431 28.9797C79.9113 28.0113 81.2245 27.4672 82.5939 27.4669H91.201C92.5706 27.4669 93.884 28.0109 94.8525 28.9794C95.8209 29.9478 96.365 31.2613 96.365 32.6309V69.3399C103.827 63.9319 111.389 57.4279 117.39 49.6069C118.261 48.4717 118.837 47.1386 119.067 45.7267C119.297 44.3148 119.174 42.8678 118.709 41.5149C115.931 33.5227 111.516 26.1983 105.745 20.0105C99.974 13.8228 92.9749 8.90785 85.1955 5.58032C77.4161 2.2528 69.0277 0.585938 60.5671 0.686416C52.1065 0.786893 43.7601 2.6525 36.062 6.16383C28.3638 9.67517 21.4834 14.7549 15.8611 21.078C10.2388 27.401 5.99842 34.8282 3.41131 42.8842C0.824207 50.9401 -0.0526487 59.4474 0.836851 67.8617C1.72635 76.276 4.36263 84.4119 8.57696 91.7489C9.31111 93.0145 10.3912 94.0444 11.6903 94.7175C12.9894 95.3906 14.4536 95.679 15.911 95.5489C17.539 95.4059 19.566 95.2029 21.976 94.9199C23.0251 94.8008 23.9937 94.2999 24.6972 93.5126C25.4008 92.7253 25.7901 91.7067 25.791 90.6509L25.79 58.4149Z"
+                                                fill="#000000" />
+                                            <path
+                                                d="M25.6021 110.51C34.6744 117.11 45.3959 121.072 56.5802 121.957C67.7646 122.841 78.9757 120.615 88.9731 115.523C98.9705 110.431 107.364 102.673 113.226 93.1068C119.087 83.5405 122.188 72.539 122.185 61.3197C122.185 59.9197 122.12 58.5347 122.027 57.1577C99.808 90.2957 58.7831 105.788 25.604 110.505"
+                                                fill="#000000" />
+                                        </svg>
+                                    </span>
+
+                                </a>
+                                <a href="https://t.me/httpYogsToken_Eth" class="">
+                                    <span class="btn-circle fs-2xl mx-1">
+                                        <svg fill="#000" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path fill="#000"
+                                                d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                                        </svg>
+                                    </span>
+
+                                </a>
+                                <a href="https://x.com/yogshouse_eth" class="">
+                                    <span class="btn-circle fs-2xl mx-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path fill="#000000"
+                                                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="mailto:contract@yogshouse.finance" class="">
+                                    <span class="btn-circle fs-2xl">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-lines overflow-hidden">
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="lines">
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+                <div class="line-vertical"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section end  -->
+
+
+
+    <section class="next-level-gaming-section pt-120 pb-120" id="intro">
+        <div class="red-ball bottom-50"></div>
+        <div class="container">
+            <div class="row justify-content-between mb-15">
+                <div class="col-lg-10 col-sm-10">
+                    <h2 class="display-four tcn-1 cursor-scale growUp title-anim"><span class="d-block">
+                            About</h2><br>
+                    <p style="font-family: 'Roboto';"><span style="color: #fff;font-weight: 900;">YOGS</span> was
+                        created with a clear mission: to revolutionize the memecoin space by merging fun with real
+                        financial value.Our platform empowers users within the DeFi landscape through a unique
+                        combination of high-yield farming, simple staking options,and upcoming mini-games on Telegram.
+
+                        <br><br>
+                    <p style="font-family: 'Roboto';"><span style="color: #fff;font-weight: 900;">YOGS</span> offers
+                        something for everyone,from crypto newcomers to seasoned investors.Our Staking system allows
+                        holders to stake tokens for high APR returns! Get ready for the YOGS TapToEarn mini game on
+                        Telegram,where fun meets rewards! In this exciting PlayToEarn game, players will tap to farm and
+                        grow their YOGS assets in real-time. Early supporters will enjoy exclusive perks and higher
+                        rewards as they participate in the YOGS ecosystem. Yogs IDO platform for game developers will
+                        open up new opportunities in the gaming sector.
+
+                        <br><br>Join YOGS as we combine fun, freedom, and financial growth for the future of DeFi!
+
+                    </p>
+
+                </div>
+            </div>
+            <!--
+            <button
+                onclick="window.open('https://monetafi.gitbook.io/moneta-wp', '_blank')"
+                class="btn-rounded-cus  border-0 d-flex align-items-center gap-3 p-xl-2 p-0 pe-xl-6 rounded-5 position-relative mt-5">
+                <span class="btn-circle fs-2xl">
+                    <svg fill="#000" width="26px" height="26px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M10.802 17.77a.703.703 0 1 1-.002 1.406.703.703 0 0 1 .002-1.406m11.024-4.347a.703.703 0 1 1 .001-1.406.703.703 0 0 1-.001 1.406m0-2.876a2.176 2.176 0 0 0-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165 0 0 0-1.784-.937c-.829 0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474 0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175 0 0 0 2.15 1.862 2.177 2.177 0 0 0 2.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176 0 0 0 24 12.72a2.176 2.176 0 0 0-2.174-2.174"/></svg>
+                </span>
+                        <span class="text-nowrap d-none d-xl-block">Gitbook</span>
+                        </button>
+            <button
+                onclick="window.open('https://drive.google.com/file/d/1w8Tzg-D9pWFyV_WeXTU7qXmD8le-A7o9/view', '_blank')"
+                class="btn-rounded-cus  border-0  align-items-center gap-3 p-xl-2 p-0 pe-xl-6 rounded-5 position-relative mt-5">
+                <span class="btn-circle fs-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M 7 2 L 7 48 L 43 48 L 43 14.59375 L 42.71875 14.28125 L 30.71875 2.28125 L 30.40625 2 Z M 9 4 L 29 4 L 29 16 L 41 16 L 41 46 L 9 46 Z M 31 5.4375 L 39.5625 14 L 31 14 Z M 15 22 L 15 24 L 35 24 L 35 22 Z M 15 28 L 15 30 L 31 30 L 31 28 Z M 15 34 L 15 36 L 35 36 L 35 34 Z"/></svg>
+                </span>
+                        <span class="text-nowrap d-none d-xl-block">Pitch Deck</span>
+                        </button>-->
+
+        </div>
+    </section>
+
+    <!-- tournament section start -->
+    <section class="tournament-section pb-120 pt-10" id="uti">
+        <!-- Diamond animation 
+        <div class="diamond-area">
+            <img class="w-100" src="https://monetafi.io/assets/img/file (3).png" alt="diamond">
+        </div>-->
+        <!-- game console animation 
+        <div class="game-console-area">
+            <img class="w-100" src="https://monetafi.io/assets/img/file (3).png" alt="game-console">
+        </div>-->
+        <div class="red-ball top-50"></div>
+        <div class="tournament-wrapper">
+            <div class="tournament-wrapper-border">
+                <div class="container pt-120 pb-120">
+                    <div class="row justify-content-between align-items-center gy-sm-0 gy-4 mb-15">
+                        <div class="col-md-6 col-sm-8">
+                            <h2 class="display-four tcn-1 cursor-scale growUp title-anim">Utilities</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="row justify-content-between align-items-center g-6 mb-4">
+                        <div class="col-md-4">
+                            <div class="card-items d-grid gap-5">
+                                <div class="card-item d-flex align-items-center gap-4">
+                                    <div class="card-img-area rounded-circle overflow-hidden">
+                                        <img class="w-50" src="assets/img/logoo-modified.png" alt="profile">
+                                    </div>
+                                    <div class="card-info">
+                                        <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        </h4>
+                                        <p class="card-text tcs-1 fw-medium">lorem</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-items d-grid gap-5">
+                                <div class="card-item d-flex align-items-center gap-4">
+                                    <div class="card-img-area rounded-circle overflow-hidden">
+                                        <img class="w-50" src="assets/img/logoo-modified.png" alt="profile">
+                                    </div>
+                                    <div class="card-info">
+                                        <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        </h4>
+                                        <p class="card-text tcs-1 fw-medium">80%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-items d-grid gap-5">
+                                <div class="card-item d-flex align-items-center gap-4">
+                                    <div class="card-img-area rounded-circle overflow-hidden">
+                                        <img class="w-50" src="assets/img/logoo-modified.png" alt="profile">
+                                    </div>
+                                    <div class="card-info">
+                                        <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+
+
+                                        </h4>
+                                        <p class="card-text tcs-1 fw-medium">20%</p>
+                                        <div style="font-size:12px;line-height:20px;"> 
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                    <div class="row  g-6">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                <div class="tournament-content px-xl-4 px-sm-2">
+                                    <div class="tournament-info mb-5">
+
+                                        <h3 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                            Yogs Financing
+                                        </h3>
+
+                                    </div>
+                                    <div class="hr-line line3"></div>
+                                    <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+
+                                        <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                            <!-- <i class="ti ti-ticket fs-base tcp-2"></i>
+                                            <span class="tcn-1 fs-sm">TBA</span> -->
+                                            <p style="font-family: 'Roboto';"><span class="subheading-utilities">
+                                                    Empowering DeFi Liquidity</span><br><br>
+
+                                                Yogs introduces a groundbreaking DeFi protocol designed to empower users
+                                                by offering liquidity against their crypto assets without requiring them
+                                                to sell. This innovative platform addresses the diverse needs of DeFi
+                                                participants, catering particularly to degens with limited capital,
+                                                long-term project investors, and Key Opinion Leaders (KOLs) seeking
+                                                liquidity solutions.<br><br><br><br><br>
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                <div class="tournament-content px-xl-4 px-sm-2">
+                                    <div class="tournament-info mb-5">
+
+                                        <h3 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                            Yogs IDO Platform
+                                        </h3>
+
+                                    </div>
+                                    <div class="hr-line line3"></div>
+                                    <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+
+                                        <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+
+
+
+                                            <p style="font-family: 'Roboto';">
+                                                <span style="color: #fff; font-weight: 600; font-size:20px;"
+                                                    class="subheading-utilities">Introducing YOGS T4G IDO Platform For
+                                                    Telegram Mini Projects!</span>
+                                                <br><br>
+                                                YOGS <span style="color: #12FEF0;font-weight: 900;"></span> is proud to
+                                                launch the T4G IDO Platform, a cutting-edge solution designed to support
+                                                and fund innovative mini projects within the Telegram ecosystem. With
+                                                T4G, developers can launch their mini games and apps, while YOGS holders
+                                                gain early access and exclusive benefits.<br><br>
+
+
+                                                This platform opens new doors for creators and investors alike, driving
+                                                growth and innovation in the world of Telegram mini projects. Stay tuned
+                                                for exciting project launches and exclusive opportunities!
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-6">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                    <div class="tournament-content px-xl-4 px-sm-2">
+                                        <div class="tournament-info mb-5">
+
+                                            <h3 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                                YogsFarm
+                                            </h3>
+
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+
+                                            <div
+                                                class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+
+                                                <p style="font-family: 'Roboto';">
+
+                                                    <span style="color: #fff; font-weight: 600; font-size:20px;"
+                                                        class="subheading-utilities">
+                                                        Get Ready for YOGS FarmToEarn: The Upcoming Telegram Mini
+                                                        Game!</span>
+                                                    <br><br>
+
+                                                    YOGS is excited to announce the FarmToEarn mini game,where fun meets
+                                                    rewards! Players will engage in farming activities to earn YOGS
+                                                    tokens while enjoying an interactive gaming experience.
+
+                                                    <br><br>This game allows users to grow their assets effortlessly
+                                                    while unlocking exciting rewards and benefits within the YOGS
+                                                    ecosystem.Don’t miss your chance to join the adventure and maximize
+                                                    your earnings!
+                                                    <br><br>
+                                                    Stay tuned for the launch details!
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                    <div class="tournament-content px-xl-4 px-sm-2">
+                                        <div class="tournament-info mb-5">
+
+                                            <h3 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                                Interactive Dashboard
+                                            </h3>
+
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+
+                                            <div
+                                                class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <!-- <i class="ti ti-ticket fs-base tcp-2"></i>
+                                                <span class="tcn-1 fs-sm">TBA</span> -->
+                                                <p style="font-family: 'Roboto';"> Our user-friendly dashboard gives you
+                                                    complete control over your assets, providing real-time updates on
+                                                    your farming and staking status, rewards earned, and market
+                                                    performance. With this transparency, users can track their earnings
+                                                    and optimize their strategies to maximize returns.
+                                                    <br><br>
+                                                    YOGS is more than just a memecoin—it’s a powerful tool for financial
+                                                    growth, designed to support both casual users and seasoned DeFi
+                                                    investors.<br><br><br><br><br><br><br>
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row  g-6">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                    <div class="tournament-content px-xl-4 px-sm-2">
+                                        <div class="tournament-info mb-5">
+
+                                            <h3 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                                Yogs Ads Revenue
+                                            </h3>
+
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+
+                                            <div
+                                                class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <!-- <i class="ti ti-ticket fs-base tcp-2"></i>
+                                            <span class="tcn-1 fs-sm">TBA</span> -->
+                                                <p style="font-family: 'Roboto';"><span
+                                                        class="subheading-utilities">Introducing YOGS Ads Revenue
+                                                        System: Share in the Success</span><br><br>YOGS is thrilled to
+                                                    unveil our Ads Revenue System, designed to benefit our community.
+                                                    With this innovative model, 90% of ad revenue generated will be
+                                                    shared directly with YOGS holders!
+                                                    <br><br> This means that as our platform grows, so does your
+                                                    potential for earnings. By holding YOGS tokens, you’ll not only
+                                                    participate in our ecosystem but also reap the rewards of our
+                                                    advertising initiatives.
+                                                    <br><br>
+                                                    Join us in maximizing your earnings while supporting the growth of
+                                                    YOGS!
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- tournament section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="tournament-more-details pb-120" id="road">
+        <div class="container">
+            <div class="row justify-content-between mb-15">
+                <div class="col-lg-10 col-sm-10">
+                    <h2 class="display-four tcn-1 cursor-scale growUp title-anim"><span class="d-block">Roadmap</h2>
+                </div>
+            </div>
+
+            <div class="singletab tournaments-tab">
+                <ul class="tablinks d-flex flex-wrap align-items-center gap-3 pb-10">
+                    <li class="nav-links active">
+                        <button class="tablink py-sm-3 py-2 px-sm-8 px-6 rounded-pill tcn-1">Phase 1</button>
+                    </li>
+                    <li class="nav-links">
+                        <button class="tablink py-sm-3 py-2 px-sm-8 px-6 rounded-pill tcn-1">Phase 2</button>
+                    </li>
+                    <li class="nav-links">
+                        <button class="tablink py-sm-3 py-2 px-sm-8 px-6 rounded-pill tcn-1">Phase 3</button>
+                    </li>
+                </ul>
+                <div class="tabcontents">
+                    <div class="tabitem active">
+                        <div class="row g-6 mb-10">
+                            <h2>Phase 1: Website Launch, Whitepaper, and Initial Marketing</h2>
+                            <!-- Website Launch -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Website Launch</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Launching YOGS! official website to
+                                            establish online presence and provide initial information about the
+                                            platform.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Whitepaper Publication -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Audit Publication</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Publishing a Detailed Yogs Audit
+                                            Report!!! Yogs Contract is fully safe and secure, ensuring transparency and
+                                            trust for our community.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Setting up Socials -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Setting up Socials</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Establishing official social media
+                                            accounts on major platforms to engage with the community and share updates.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Pre Launch Marketing -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Pre Launch Marketing</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Initiating marketing campaigns to build
+                                            anticipation and awareness prior to launch.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Fair Launch -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Public Sale </h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Conducting a PublicSale event to
+                                            distribute initial tokens with transparency and fairness.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Bot Release -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Uniswap Listing</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Yogs will be listed and everyone can
+                                            start buying and selling.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Post Launch Marketing Campaign -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Post Launch Marketing Campaign</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Continuing marketing efforts post-launch
+                                            to maintain momentum and attract new users.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Platform Release -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Bot Release, Launching Yogs Farming & Staking Dapp</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Launching Unique Yogs Farm To Earn
+                                            Telegram bot to provide user-friendly interactions and support & Launching
+                                            Own YogsDapp.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Socials Updates & Listings -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Socials Updates & Listings</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Regular updates on social media
+                                            platforms and listing on CG & CMC.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabitem">
+                        <div class="row g-6 mb-10">
+                            <h2>Phase 2: launchpad Partnerships and Protocol Development</h2>
+                            <!-- Yogs IDO Platform -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Yogs IDO Platform </h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Yogs IDO platform will be launched
+                                            through the most secure and unique Way.</li> <br> <br>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Influencer Partnerships</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Collaborate with key influencers (KOLs)
+                                            to create visually appealing, informative posts promoting Yogs loan utility.
+                                            Develop compelling visual content.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DeFi Project Partnerships -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">DeFi Project Partnerships</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> We will partner with various projects
+                                            and try to bring a new revolution with DeFi project.</li> <br> <br>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Agent Network Development -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Agent Network Development</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Build Yogs own agent network modeled
+                                            after successful DeFi projects. Agents will facilitate group mortgage
+                                            initiatives,fostering community engagement and expanding market reach.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Community Outreach -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Community Outreach</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Engage with cryptocurrency communities
+                                            through influencer endorsements and targeted social media campaigns &
+                                            referral bonuses.</li> <br>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Launch of Liquidity Financing Protocol (LFP) -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Whitepaper Publication</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Publishing a detailed whitepaper
+                                            outlining Yogs vision, technical architecture, and tokenomics.</li> <br>
+                                        <br>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tabitem">
+                        <div class="row g-6 mb-10">
+                            <h2>Phase 3: Expansion and New Features</h2>
+                            <!-- Agent Expansion -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Website Upgrade & Ads Revenue</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> We will upgrade our website and
+                                            introduce Ads revenue system For Holders.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DAO and Community Partnerships -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Dogs & Notcoin Partnership</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> We will partner with them and work with
+                                            them to move forward together.</li> <br>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DeFi Site Verification -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Airdrop & Farming Bot Update </h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Another new project will come in our
+                                            ecosystem and And this Coin will be for our community Early supporters and
+                                            Airdrop users</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Monetizer Program Launch -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">More Private Marketing & Listing</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> We will be doing more private marketing
+                                            and bringing some new features through it.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Pre-Launch Program -->
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Tier 1 Exchange Listing </h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Probably nothing - If You Know You know.
+                                        </li> <br> <br>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- OTC DAO Market Introduction  
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">OTC DAO Market Introduction</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Pioneer the OTC DAO market, where yogshouse buys tokens directly from projects and investors at fair market prices. Implement trading strategies to minimize price volatility and ensure sustainable growth.</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <!-- Goal Calculator Tool  
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Goal Calculator Tool</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Introduce a goal calculator tool on the yogshouse platform, enabling users to plan and visualize their financial goals such as retirement savings, home purchases, etc. Incorporate investment options through yogshouse OTC DAO for systematic investment planning (SIPs).</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <!-- Market Sentiment Bot  
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Market Sentiment Bot</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Develop a market sentiment bot to provide users with insights on potential investment outcomes based on holding strategies. Market the bot as a user-friendly alternative to complex wallet-connected platforms, enhancing accessibility and user engagement.</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <!-- Marketing and Expansion Initiatives  
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="bracket-card p-lg-8 p-sm-6 p-4 bgn-4 rounded">
+                                    <div class="bracket-card-header d-flex align-items-center gap-2 mb-2">
+                                        <h4 class="tcn-1">Marketing and Expansion Initiatives</h4>
+                                    </div>
+                                    <ul class="tcn-1 d-block mb-3">
+                                        <li><span style="color: #fff;">•</span> Expand marketing efforts to include hiring a seasoned marketer and team. Plan for listings on major cryptocurrency exchanges (CEXs) and participation in significant industry expos like those in Singapore. Distribute free expo tickets to yogshouse holders to foster community engagement and visibility.</li>
+                                    </ul>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="tournament-section pb-120 pt-10" id="token">
+        <!-- Diamond animation 
+        <div class="diamond-area">
+            <img class="w-100" src="https://monetafi.io/assets/img/file (3).png" alt="diamond">
+        </div>-->
+        <!-- game console animation 
+        <div class="game-console-area">
+            <img class="w-100" src="https://monetafi.io/assets/img/file (3).png" alt="game-console">
+        </div>-->
+        <div class="red-ball top-50"></div>
+        <div class="tournament-wrapper" style="">
+            <div class="tournament-wrapper-border">
+                <div class="container pt-120 pb-120">
+                    <div class="row justify-content-between align-items-center gy-sm-0 gy-4 mb-15">
+                        <div class="col-md-6 col-sm-8">
+                            <h2 class="display-four tcn-1 cursor-scale growUp title-anim">
+                                YOGS Contract <small style="font-size:13px;">( Yogs isn't listed Yet )</small></h2>
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-between align-items-center g-6 mb-4">
+                        <div class="col-md-4">
+                            <div class="card-items d-grid gap-5">
+                                <div class="card-item d-flex align-items-center gap-4">
+                                    <div class="card-img-area rounded-circle overflow-hidden">
+                                        <!-- <img class="w-50" src="assets/img/logoo-modified.png" alt="profile"> -->
+                                    </div>
+                                    <div class="card-info">
+                                        <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                            Tax:
+                                        </h4>
+                                        <p class="card-text tcs-1 fw-medium">0/0</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-items d-grid gap-5">
+                                <div class="card-item d-flex align-items-center gap-4">
+                                    <div class="card-img-area rounded-circle overflow-hidden">
+                                        <!-- <img class="w-50" src="assets/img/logoo-modified.png" alt="profile"> -->
+                                    </div>
+                                    <div class="card-info">
+                                        <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                            Total supply:
+                                        </h4>
+                                        <p class="card-text tcs-1 fw-medium">10,000,000,000,000 <span
+                                                style="color: #d6d6d612FEF0;">$YOGS</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-items d-grid gap-5">
+                                <div class="card-item d-flex align-items-center gap-4">
+                                    <div class="card-img-area rounded-circle overflow-hidden">
+                                        <!-- <img class="w-50" src="assets/img/logoo-modified.png" alt="profile"> -->
+                                    </div>
+                                    <div class="card-info">
+                                        <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                            Liquidity:
+
+
+                                        </h4>
+                                        <p class="card-text tcs-1 fw-medium">100% liquidity Will Be Burn For Forever at
+                                            Launch & YOGS token smart contract has passed a thorough audit,proving its
+                                            full security and reliability</p>
+                                        <div style="font-size:12px;line-height:20px;">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-between align-items-center g-6">
+                        <div class="col-xl-12 col-md-12">
+                            <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                <div class="tournament-content px-xl-4 px-sm-2">
+                                    <div class="tournament-info mb-5">
+
+                                        <h3 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                            Contract:
+                                            <br>
+                                            <!-- <small>Airdropped to the top token holders every day starting
+                                                15<sup>th</sup> April
+                                                at 11:30AM UTC</small> -->
+
+                                        </h3>
+
+
+                                    </div>
+                                    <div class="hr-line line3"></div>
+                                    <div class="copy">
+                                        <form class="form11">
+                                            <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+
+                                                <div
+                                                    class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                    <i class="ti ti-ticket fs-base tcp-2"></i>
+                                                    <span class="tcn-1 fs-sm">
+                                                        <p value="tba">
+                                                            tba</p>
+                                                    </span>
+                                                </div>
+
+                                                <div
+                                                    class="date-time bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                    <i class="ti ti-calendar fs-base tcn-1"></i>
+                                                    <button class="button11" type="button">
+                                                        <span class="tcn-1 fs-sm">Copy</span></button>
+                                                </div>
+
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button
+                        onclick="location.href='https://etherscan.io/address/0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF'"
+                        class="btn-rounded-cus  border-0 d-flex align-items-center gap-3 p-xl-2 p-0 pe-xl-6 rounded-5 position-relative mt-5"
+                        style="float: left;width: 190px;">
+                        <span class="btn-circle fs-2xl">
+                            <svg width="30px" height="30px" viewBox="0 0 123 123" fill="#000000"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.79 58.4149C25.7901 57.7357 25.9244 57.0633 26.1851 56.4361C26.4458 55.809 26.8278 55.2396 27.3092 54.7605C27.7907 54.2814 28.3619 53.9021 28.9903 53.6444C29.6187 53.3867 30.2918 53.2557 30.971 53.2589L39.561 53.2869C40.9305 53.2869 42.244 53.831 43.2124 54.7994C44.1809 55.7678 44.725 57.0813 44.725 58.4509V90.9309C45.692 90.6439 46.934 90.3379 48.293 90.0179C49.237 89.7962 50.0783 89.262 50.6805 88.5019C51.2826 87.7418 51.6102 86.8006 51.61 85.8309V45.5409C51.61 44.1712 52.154 42.8576 53.1224 41.889C54.0908 40.9204 55.4043 40.3762 56.774 40.3759H65.381C66.7506 40.3762 68.0641 40.9204 69.0325 41.889C70.0009 42.8576 70.545 44.1712 70.545 45.5409V82.9339C70.545 82.9339 72.7 82.0619 74.799 81.1759C75.5787 80.8462 76.2441 80.2941 76.7122 79.5886C77.1803 78.8832 77.4302 78.0555 77.431 77.2089V32.6309C77.431 31.2615 77.9749 29.9481 78.9431 28.9797C79.9113 28.0113 81.2245 27.4672 82.5939 27.4669H91.201C92.5706 27.4669 93.884 28.0109 94.8525 28.9794C95.8209 29.9478 96.365 31.2613 96.365 32.6309V69.3399C103.827 63.9319 111.389 57.4279 117.39 49.6069C118.261 48.4717 118.837 47.1386 119.067 45.7267C119.297 44.3148 119.174 42.8678 118.709 41.5149C115.931 33.5227 111.516 26.1983 105.745 20.0105C99.974 13.8228 92.9749 8.90785 85.1955 5.58032C77.4161 2.2528 69.0277 0.585938 60.5671 0.686416C52.1065 0.786893 43.7601 2.6525 36.062 6.16383C28.3638 9.67517 21.4834 14.7549 15.8611 21.078C10.2388 27.401 5.99842 34.8282 3.41131 42.8842C0.824207 50.9401 -0.0526487 59.4474 0.836851 67.8617C1.72635 76.276 4.36263 84.4119 8.57696 91.7489C9.31111 93.0145 10.3912 94.0444 11.6903 94.7175C12.9894 95.3906 14.4536 95.679 15.911 95.5489C17.539 95.4059 19.566 95.2029 21.976 94.9199C23.0251 94.8008 23.9937 94.2999 24.6972 93.5126C25.4008 92.7253 25.7901 91.7067 25.791 90.6509L25.79 58.4149Z"
+                                    fill="#000000" />
+                                <path
+                                    d="M25.6021 110.51C34.6744 117.11 45.3959 121.072 56.5802 121.957C67.7646 122.841 78.9757 120.615 88.9731 115.523C98.9705 110.431 107.364 102.673 113.226 93.1068C119.087 83.5405 122.188 72.539 122.185 61.3197C122.185 59.9197 122.12 58.5347 122.027 57.1577C99.808 90.2957 58.7831 105.788 25.604 110.505"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                        <span class="text-nowrap d-xl-block">Contract Address</span>
+                    </button>
+                    <button onclick="location.href='https://coinsult.net/projects/yogs-house/'"
+                        class="btn-rounded-cus  border-0 d-flex align-items-center gap-3 p-xl-2 p-0 pe-xl-6 rounded-5 position-relative mt-5"
+                        style="left:15px;width: 160px;">
+                        <span class="btn-circle fs-2xl">
+                            <img src="logo.png" style="width:36px;" />
+                        </span>
+                        <span class="text-nowrap  d-xl-block">Audit Report</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+  <div class="call-to-action pt-120 pb-120 bgn-4 overflow-x-hidden" id="cta">
+        <div class="container">
+            <div class="row justify-content-between g-6">
+                <div class="col-lg-6">
+                    <span class="display-three tcn-1 cursor-scale growUp mb-8 d-block title-anim">Join the Whitelist
+                    </span>
+                    <span class="fs-lg tcn-6">
+                        Secure your spot in our inner circle.
+                    </span>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <form action="#">
+                        <div class="single-input mb-6">
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                        <div
+                            class="d-flex align-items-md-center align-items-start justify-content-between gap-lg-8 gap-6 flex-md-row flex-column">
+                            <div class="d-flex align-items-center gap-lg-4 gap-2">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="fs-base tcn-6">I agree with <a href="#" class="tcp-1">Privacy
+                                        Policy</a>
+                                    and <a href="#" class="tcp-1">Terms & Conditions</a>
+                                </span>
+                            </div>
+                            <button type="submit"
+                                class="bttn py-sm-4 py-3 px-lg-10 px-sm-8 px-6 bgp-1 tcn-1 rounded-4">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- footer section start  -->
+    <footer class="footer bgn-4 bt">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-3 col-sm-6 br py-lg-20 pt-sm-15 pt-10 footer-card-area">
+                    <div class="py-lg-10">
+                        <div class="footer-logo mb-8">
+                            <a href="#" class="d-grid gap-6">
+                                <!-- <div class="flogo-1">
+                                    <img class="w-100" src="assets/img/icon.png" alt="favicon">
+                                </div> -->
+                                <div class="flogo-2">
+                                    <img class="w-100 logoresp" src="logo.png" alt="logo">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <ul class="d-flex align-items-center gap-3 flex-wrap">
+
+                                <li>
+                                    <a target="_blank"
+                                        href="https://etherscan.io/address/0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF">
+                                        <svg width="30px" height="30px" viewBox="0 0 123 123" fill="#000000"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M25.79 58.4149C25.7901 57.7357 25.9244 57.0633 26.1851 56.4361C26.4458 55.809 26.8278 55.2396 27.3092 54.7605C27.7907 54.2814 28.3619 53.9021 28.9903 53.6444C29.6187 53.3867 30.2918 53.2557 30.971 53.2589L39.561 53.2869C40.9305 53.2869 42.244 53.831 43.2124 54.7994C44.1809 55.7678 44.725 57.0813 44.725 58.4509V90.9309C45.692 90.6439 46.934 90.3379 48.293 90.0179C49.237 89.7962 50.0783 89.262 50.6805 88.5019C51.2826 87.7418 51.6102 86.8006 51.61 85.8309V45.5409C51.61 44.1712 52.154 42.8576 53.1224 41.889C54.0908 40.9204 55.4043 40.3762 56.774 40.3759H65.381C66.7506 40.3762 68.0641 40.9204 69.0325 41.889C70.0009 42.8576 70.545 44.1712 70.545 45.5409V82.9339C70.545 82.9339 72.7 82.0619 74.799 81.1759C75.5787 80.8462 76.2441 80.2941 76.7122 79.5886C77.1803 78.8832 77.4302 78.0555 77.431 77.2089V32.6309C77.431 31.2615 77.9749 29.9481 78.9431 28.9797C79.9113 28.0113 81.2245 27.4672 82.5939 27.4669H91.201C92.5706 27.4669 93.884 28.0109 94.8525 28.9794C95.8209 29.9478 96.365 31.2613 96.365 32.6309V69.3399C103.827 63.9319 111.389 57.4279 117.39 49.6069C118.261 48.4717 118.837 47.1386 119.067 45.7267C119.297 44.3148 119.174 42.8678 118.709 41.5149C115.931 33.5227 111.516 26.1983 105.745 20.0105C99.974 13.8228 92.9749 8.90785 85.1955 5.58032C77.4161 2.2528 69.0277 0.585938 60.5671 0.686416C52.1065 0.786893 43.7601 2.6525 36.062 6.16383C28.3638 9.67517 21.4834 14.7549 15.8611 21.078C10.2388 27.401 5.99842 34.8282 3.41131 42.8842C0.824207 50.9401 -0.0526487 59.4474 0.836851 67.8617C1.72635 76.276 4.36263 84.4119 8.57696 91.7489C9.31111 93.0145 10.3912 94.0444 11.6903 94.7175C12.9894 95.3906 14.4536 95.679 15.911 95.5489C17.539 95.4059 19.566 95.2029 21.976 94.9199C23.0251 94.8008 23.9937 94.2999 24.6972 93.5126C25.4008 92.7253 25.7901 91.7067 25.791 90.6509L25.79 58.4149Z"
+                                                fill="#000000" />
+                                            <path
+                                                d="M25.6021 110.51C34.6744 117.11 45.3959 121.072 56.5802 121.957C67.7646 122.841 78.9757 120.615 88.9731 115.523C98.9705 110.431 107.364 102.673 113.226 93.1068C119.087 83.5405 122.188 72.539 122.185 61.3197C122.185 59.9197 122.12 58.5347 122.027 57.1577C99.808 90.2957 58.7831 105.788 25.604 110.505"
+                                                fill="#000000" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="https://medium.com/@yogshouse">
+                                        <svg width="30px" height="30px" viewBox="0 -55 256 256" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                                            <g>
+                                                <path
+                                                    d="M72.2009141,1.42108547e-14 C112.076502,1.42108547e-14 144.399375,32.5485469 144.399375,72.6964154 C144.399375,112.844284 112.074049,145.390378 72.2009141,145.390378 C32.327779,145.390378 0,112.844284 0,72.6964154 C0,32.5485469 32.325326,1.42108547e-14 72.2009141,1.42108547e-14 Z M187.500628,4.25836743 C207.438422,4.25836743 223.601085,34.8960455 223.601085,72.6964154 L223.603538,72.6964154 C223.603538,110.486973 207.440875,141.134463 187.503081,141.134463 C167.565287,141.134463 151.402624,110.486973 151.402624,72.6964154 C151.402624,34.9058574 167.562834,4.25836743 187.500628,4.25836743 Z M243.303393,11.3867175 C250.314,11.3867175 256,38.835526 256,72.6964154 C256,106.547493 250.316453,134.006113 243.303393,134.006113 C236.290333,134.006113 230.609239,106.554852 230.609239,72.6964154 C230.609239,38.837979 236.292786,11.3867175 243.303393,11.3867175 Z"
+                                                    fill="#000000">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" href="https://t.me/httpYogsToken_Eth">
+                                        <svg fill="#000" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path fill="#000"
+                                                d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://x.com/yogshouse_eth">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
+                                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path fill="#000000"
+                                                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="mailto:contract@yogshouse.finance">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
+                                        </svg>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mt-5 br py-lg-20 pt-sm-15 pt-10 footer-card-area">
+                    <div class="py-lg-10">
+                        <h4 class="footer-title mb-8 title-anim">Explore</h4>
+                        <ul class="footer-list d-grid gap-4">
+                            <li><a href="#about" class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Home</a></li>
+                            <li><a href="#intro" class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> About yogshouse</a></li>
+                            <li><a href="#token" class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Tokenomics</a></li>
+                            <li><a href="#road" class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Roadmap</a></li>
+                            <li><a href="#uti" class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Utilities</a></li>
+                            <!-- <li><a href="#faq" class="footer-link d-flex align-items-center tcn-6"> <i
+                                            class="ti ti-chevron-right"></i> FAQ</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 py-lg-20 pt-sm-15 pt-10 footer-card-area">
+                    <div class="py-lg-10">
+                        <h4 class="footer-title mb-8 title-anim">Follow Us</h4>
+                        <ul class="footer-list d-grid gap-4">
+                            <!-- <li><a target="_blank" href="#" class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Instagram</a></li> -->
+                            <li><a target="_blank" href="https://x.com/yogshouse_eth"
+                                    class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Twitter</a></li>
+                            <li><a target="_blank" href="https://t.me/httpYogsToken_Eth"
+                                    class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Telegram</a></li>
+
+                            <li><a target="_blank" href="https://medium.com/@yogshouse"
+                                    class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Medium</a></li>
+                            <li><a target="_blank"
+                                    href="https://etherscan.io/address/0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF"
+                                    class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> EtherScan</a></li>
+                            <li><a target="_blank" href="mailto:contract@yogshouse.finance"
+                                    class="footer-link d-flex align-items-center tcn-6"> <i
+                                        class="ti ti-chevron-right"></i> Email</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-4 pt-lg-4 pt-8 justify-content-between g-2">
+                <div class="col-xxl-10 col-lg-10 order-last order-lg-first">
+                    <div><small>
+                            All rights reserved yogshouse</small></div>
+                    <hr>
+                </div>
+                <div class="col-xxl-3 col-lg-5">
+
+                </div>
+            </div>
+        </div>
+        <!-- footer banner img  -->
+        <!-- <div class="footer-banner-img" id="faa">
+            <img class="w-100" src="assets/img/logoo-modified.png" alt="banner">
+        </div> -->
+    </footer>
+    <script src="https://kit.fontawesome.com/876ddc5eb4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/vanilla-tilt.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
+    <script src="js/gsap-customization.js"></script>
+    <script src="js/apexcharts.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/magnific-popup.js_1.1.0_jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                button.classList.toggle('active');
+                answer.classList.toggle('open');
+            });
+        });
+
+
+    </script>
+
+
+
+    <script>
+        function copyToClipboard() {
+            const address = "0xDec91c7B1187b7b8d52586aA9Ec35c924dF214DF";
+            navigator.clipboard.writeText(address).then(function() {
+                // Hiển thị thông báo alert sau khi sao chép
+                alert("Address copied: " + address);
+            }, function(err) {
+                console.error("Error copying text: ", err);
+            });
+            }
+
+        (function () {
+            var copyButton = document.querySelector('.copy button');
+            var copyInput = document.querySelector('.copy p');
+            copyButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                var text = copyInput.select();
+                document.execCommand('copy');
+            });
+
+            copyInput.addEventListener('click', function () {
+                this.select();
+            });
+        })();
+    </script>
+    <style type="text/css">
+        .form11 input {
+            border: 0px solid;
+            outline: 0;
+            background: transparent;
+            color: #fff;
+            width: 400px;
+        }
+
+        .form11 .button11 {
+            display: block;
+            position: relative;
+            top: 0px;
+            right: 0px;
+            /*  transform: translateY(-50%);*/
+            border: 0;
+            outline: 0;
+            color: #fff;
+            background: #16191b;
+            cursor: pointer;
+        }
+
+        .form11 .button11:before {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 35px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #56575a;
+        }
+
+        .form11 .button11:after {
+            content: "Copy";
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            top: 40px;
+            left: -37px;
+            width: 84px;
+            height: 36px;
+            color: #fff;
+            line-height: 36px;
+            text-align: center;
+            background: #56575a;
+            border-radius: 3px;
+        }
+
+        .form11 .button11:hover {
+            background-color: #16191b;
+        }
+
+        .form11 .button11:hover:before,
+        .form11 .button11:hover:after {
+            display: block;
+        }
+
+        .form11 .button11:active,
+        .form11 .button11:focus {
+            outline: none;
+        }
+
+        .form11 .button11:active:after,
+        .form11 .button11:focus:after {
+            content: "copied!";
+        }
+    </style>
+
+
+
+</body>
+
+
+</html>
